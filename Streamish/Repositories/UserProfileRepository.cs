@@ -165,7 +165,7 @@ namespace Streamish.Repositories
                                         v.Id as 'VideoId', v.Title, v.Description, v.Url, v.DateCreated as 'VideoDate', v.UserProfileId
                                         from UserProfile u
                                         join Video v on v.UserProfileId = u.Id
-                                            where u.Id =@id";
+                                            where u.Id = @id";
                     cmd.Parameters.AddWithValue("@id", id);
 
                     var videos = new List<Video>();
